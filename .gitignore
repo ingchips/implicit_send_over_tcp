@@ -1,0 +1,7 @@
+.vscode/
+*.user
+Debug/
+Release/
+*.ncb
+*.suo
+*.filters

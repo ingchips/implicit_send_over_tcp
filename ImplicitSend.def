@@ -1,0 +1,37 @@
+;;;;
+ ;;; ImplicitSend.def
+ ;;;
+ ;;; This is the source code for the standard implicit_send3.dll that is provided with the Profile Tuning Suite (PTS). It
+ ;;; is provided to PTS users as a starting point for developing their own Implict Send DLL.
+ ;;;
+ ;;; Please see the "Automating - Using Implicit Send" document for more information. This document can be found in the
+ ;;; same folder as this source code, or by selecting "Reference Documents" -> "Automating" from the PTS Start page.
+ ;;;
+ ;;; ----------
+ ;;;
+ ;;; This file is a module defintion file for input to the linker. It is being used to ensure that the function names are
+ ;;; exported correctly.
+ ;;;
+ ;;; (Apparently __declspec(dllexport) and WINAPI (aka _stdcall) don't play well together and will produce symbol names
+ ;;; containing a leading "_".)
+ ;;;
+ ;;; ----------
+ ;;;
+ ;;; Copyright 2012, Bluetooth SIG, Inc.
+ ;;;
+ ;;; ----------
+ ;;;
+ ;;; Tom Allebrandi (tallebrandi@bluetooth.com)
+ ;;; Bluetooth SIG, Inc.
+ ;;;;
+
+LIBRARY "Implicit_Send3"
+
+EXPORTS
+	InitImplicitSend
+	ImplicitStartTestCase
+	ImplicitSendStyle
+	ImplicitSendPinCode
+	ImplicitTestCaseFinished
+	ImplicitSendStyleEx
+	ImplicitSendPinCodeEx
